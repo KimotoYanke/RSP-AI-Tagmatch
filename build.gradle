@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+task runApp(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+
+  main = 'common.Runner'
+
+  // arguments to pass to the application
+  args 'appArg1'
+}
