@@ -168,7 +168,7 @@ public class BattleManager {
     TagTeamAction b = this.teamB.getAction();
     Desicion d = getDesicion(a, b);
     this.teamA.after(d.toResult(TeamName.TeamA));
-    this.teamA.after(d.toResult(TeamName.TeamB));
+    this.teamB.after(d.toResult(TeamName.TeamB));
     System.out.println(a);
     System.out.println(b);
     System.out.println(d);
@@ -184,7 +184,10 @@ public class BattleManager {
     this.config(SampleTeam1, SampleTeam2);
     this.init();
     // 50000回ループ * 5回戦，結果出力などの処理が必要
-    this.buttle();
+    for (int i = 0; i < 50; i++) {
+      System.out.println("[" + i + "]\n");
+      this.buttle();
+    }
   }
 
 }

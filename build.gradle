@@ -1,5 +1,11 @@
 apply plugin: 'java'
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'common.Runner'
+    }
+}
+
 task runApp(type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
 
@@ -7,4 +13,5 @@ task runApp(type: JavaExec) {
 
   // arguments to pass to the application
   args 'appArg1'
+  standardInput = System.in
 }

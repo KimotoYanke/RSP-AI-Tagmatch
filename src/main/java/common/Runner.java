@@ -1,6 +1,5 @@
 package common;
 
-
 /**
  * 実行クラス
  */
